@@ -1,9 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta
+      name="viewport"
+      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+ />
+	
+<link rel='manifest' href='manifest.json'><!-- kein / vor manifest,json sonnst sucht es nicht im selben Ordner-->
     <title>AR</title>
     <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+
+    <script>
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./service-worker.js');
+	console.log("Servive Worker registered");	  
+  });
+}
+</script>
   </head>
   <body>
     <a-scene arjs="debugUIEnabled: false">
