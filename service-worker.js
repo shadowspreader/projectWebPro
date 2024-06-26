@@ -1,4 +1,4 @@
-const cacheName = 'pong';
+const cacheName = 'AR';
 
 
 const staticAssets = [ 
